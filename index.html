@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Marco Offset</title>
+</head>
+<body>
+    <h1>The Marco Offset</h1>
+    <p>The Marco Offset is a way of calculating you minimum donation to <a href="https://donate.tiltify.com/@relay-fm/relay-fm">Relay FM for St. Jude 2023 fundraiser</a>.</p>
+
+    <p>The way it is calculated is you take the base model price of an iPhone 15 or iPhone 15 Pro that you are purchasing during the month of September and subtract that from your total purchase price. Whatever that difference is what your minimum donation should be. This includes but is not limited to the following:</p>
+    
+    <ul>
+    <li>Phone upgrades (size, storage, etc)</li>
+    <li>Accessories</li>
+    <li>AppleCare (Monthly multiply by 12)</li>
+    <li>Taxes</li>
+    <li>Shipping costs</li>
+    </ul>
+    
+    <p>To help with this process a calculator has provided below. The first line is the total on your receipt. If you make monthly payments for AppleCare on the second line add what that monthly payment is.</p>
+    <!-- Add the dropdown box here -->
+    <label for="selectedModel">Select iPhone Model:</label>
+    <select id="selectedModel">
+        <option value="iphone15">iPhone 15</option>
+        <option value="iphone15pro">iPhone 15 Pro</option>
+    </select><br>
+
+    <label for="num1">iPhone Purchase Total:</label>
+    <input type="number" id="num1"><br>
+    <label for="num2">Monthly Apple Care:</label>
+    <input type="number" id="num2"><br>
+
+    <button onclick="calculateTotal()">Calculate Total</button>
+    <p>Minimum Donation: $<span id="total">0</span></p>
+
+    <script src="script.js"></script>
+
+
+
+</body>
+<footer>
+    <small>
+        <p>Made by <a href="https://mastodon.social/@bbech">bbech</a>.<br />
+        <a href="https://github.com/bjbech/TheMarcoOffset">Github Repo</a>
+        </p>
+
+    </small>
+
+</footer>
+
+</html>

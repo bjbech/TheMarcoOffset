@@ -26,5 +26,6 @@ function calculateTotal() {
     total = total < 0 ? 0 : total;
 
     // Display the total
-    document.getElementById("total").innerText = total;
+    var formatter = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    document.getElementById("total").innerText = formatter.format(total);
 }

@@ -1,8 +1,10 @@
 # The Marco Offset
 
+This is the repository for the website [TheMarcoOffset](themarcooffset.com), a calculator to figure out your Marco Offset amount.
+
 ## What is The Marco Offset?
 
-The Marco Offset is a way to calculate your minimum donation to Relay for the St. Jude fundraiser based on a method devised by [Marco Arment](marco.org) on the [Accidental Tech Podcast](atp.fm).
+The Marco Offset is a way to calculate your minimum donation to Relay for the St. Jude fundraiser based on a method devised by [Marco Arment](marco.org) on the [Accidental Tech Podcast](atp.fm). 
 
 To calculate:
 1. Subtract the base model price of an iPhone or iPhone Pro from your total purchase price.

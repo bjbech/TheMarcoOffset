@@ -19,7 +19,7 @@ To calculate:
 
 ## Enhancements to Add
 
-- **Multi-country support**: Expand the functionality to support different currencies. Thinking best to probably add Canada, GBR, and the Euro.
+- **Multi-country support**: Expand the functionality to support different currencies. Thinking best to probably add Canada, GBR, and the Euro. [Github Issue](https://github.com/bjbech/TheMarcoOffset/issues/4)
 - **Additional Apple products**: Support for calculating donations based on the purchase of other Apple products such as Apple Watch, AirPods, etc.
 - **Product selection checkboxes**: Replace the current dropdown of iPhone models with checkboxes for multiple product types (e.g., iPhone, Watch, AirPods) to allow users to select multiple products.
 

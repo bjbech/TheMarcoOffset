@@ -1,6 +1,6 @@
 # The Marco Offset
 
-This is the repository for the website [TheMarcoOffset](themarcooffset.com), a calculator to figure out your Marco Offset amount.
+This is the repository for the website [TheMarcoOffset](https://themarcooffset.com), a calculator to figure out your Marco Offset amount.
 
 ## What is The Marco Offset?
 

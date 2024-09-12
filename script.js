@@ -5,10 +5,10 @@ function calculateTotal() {
     // Set the starting price based on the selected model
     var startingPrice;
     switch (selectedModel) {
-        case "iphone15":
+        case "iphone16":
             startingPrice = 799; // Set the starting price for iPhone 15
             break;
-        case "iphone15pro":
+        case "iphone16pro":
             startingPrice = 999; // Set the starting price for iPhone 15 Pro
             break;
         default:

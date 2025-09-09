@@ -5,11 +5,14 @@ function calculateTotal() {
     // Set the starting price based on the selected model
     var startingPrice;
     switch (selectedModel) {
-        case "iphone16":
-            startingPrice = 799; // Set the starting price for iPhone 15
+        case "iphone17":
+            startingPrice = 799; // Set the starting price for iPhone 17
             break;
-        case "iphone16pro":
-            startingPrice = 999; // Set the starting price for iPhone 15 Pro
+        case "iphone17pro":
+            startingPrice = 1099; // Set the starting price for iPhone 17 Pro
+            break;
+        case "iphoneAir":
+            startingPrice = 999; // Set the starting price for iPhone Air
             break;
         default:
             startingPrice = 0; // Default if none of the options match
@@ -28,4 +31,9 @@ function calculateTotal() {
     // Display the total
     var formatter = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     document.getElementById("total").innerText = formatter.format(total);
+
+    // Update the donation link with the total amount
+    var baseUrl = "https://donate.tiltify.com/@bbech/the-marco-offset";
+    var updatedUrl = baseUrl + "?amount=" + total.toFixed(2);
+    document.getElementById("donationLink").href = updatedUrl;
 }

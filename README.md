@@ -28,3 +28,11 @@ To calculate:
 1. Fork the repository.
 2. Create a new branch.
 3. Make your changes and submit a pull request.
+
+## Change Log
+2025-09-09: Updated to 2025 campaign and iPhone release information; Added functionality where the sub-campaign link auto passes along your suggested minimum donation as a parameter
+2024-09-12: Updated to 2025 campaign and iPhone release information.
+2023-09-18: Rename "Apple Care" to "AppleCare"
+2023-09-15: Corrected typo
+2023-09-13: Sub-campaign added to the page
+2023-09-12: Inital commit; added Pico CSS; Fixed decimal formatting of minimum donation

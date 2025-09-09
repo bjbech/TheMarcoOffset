@@ -8,9 +8,9 @@
 <body>
     <main class="container">
         <h1>The Marco Offset</h1>
-        <p>The Marco Offset is a way of calculating your minimum donation to <a href="https://relay.experience.stjude.org">Relay FM for St. Jude 2024 fundraiser</a>.</p>
+        <p>The Marco Offset is a way of calculating your minimum donation to <a href="https://relay.experience.stjude.org">Relay FM for St. Jude 2025 fundraiser</a>.</p>
 
-        <p>The way it is calculated is you take the base model price of an iPhone 16 or iPhone 16 Pro that you are purchasing during the month of September and subtract that from your total purchase price. Whatever that difference is what your minimum donation should be. This includes but is not limited to the following:</p>
+        <p>The way it is calculated is you take the base model price of an iPhone 17, iPhone 17 Pro, or iPhone Air that you are purchasing during the month of September and subtract that from your total purchase price. Whatever that difference is what your minimum donation should be. This includes but is not limited to the following:</p>
         
         <ul>
         <li>Phone upgrades (size, storage, etc)</li>
@@ -24,8 +24,9 @@
         <!-- Add the dropdown box here -->
         <label for="selectedModel">Select iPhone Model:</label>
         <select id="selectedModel">
-            <option value="iphone16">iPhone 16</option>
-            <option value="iphone16pro">iPhone 16 Pro</option>
+            <option value="iphone17">iPhone 17</option>
+            <option value="iphone17pro">iPhone 17 Pro</option>
+            <option value="iphoneAir">iPhone Air</option>
         </select><br>
 
         <label for="num1">iPhone Purchase Total:</label>
@@ -36,7 +37,8 @@
         <button onclick="calculateTotal()">Calculate Total</button>
         <p>Minimum Donation: $<span id="total">0</span></p>
 
-        <p>I have established a <a href="https://donate.tiltify.com/@bbech/the-marco-offset">sub-campaign</a> designed to make tracking the funds raised for 'The Marco Offset' donation more enjoyable.</p>
+        <p>I have established a <a id="donationLink" href="https://donate.tiltify.com/@bbech/the-marco-offset">sub-campaign</a> designed to make tracking the funds raised for 'The Marco Offset' donation more enjoyable.</p>
+
         <footer>
             <small>
                 <p>Made by <a href="https://mastodon.social/@bbech">bbech</a>.<br />

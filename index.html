@@ -4,38 +4,83 @@
     <title>The Marco Offset</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        .quantity-input {
+            width: 80px;
+            text-align: center;
+        }
+        table {
+            margin-top: 2rem;
+        }
+        .total-row {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .device-price {
+            text-align: right;
+        }
+        .device-total {
+            text-align: right;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <main class="container">
         <h1>The Marco Offset</h1>
         <p>The Marco Offset is a way of calculating your minimum donation to <a href="https://relay.experience.stjude.org">Relay FM for St. Jude 2025 fundraiser</a>.</p>
 
-        <p>The way it is calculated is you take the base model price of an iPhone 17, iPhone 17 Pro, or iPhone Air that you are purchasing during the month of September and subtract that from your total purchase price. Whatever that difference is what your minimum donation should be. This includes but is not limited to the following:</p>
+        <p>The way it is calculated is you take the base model price of the Apple devices you are purchasing during the month of September and subtract that from your total purchase price. Whatever that difference is what your minimum donation should be. This includes but is not limited to the following:</p>
         
         <ul>
-        <li>Phone upgrades (size, storage, etc)</li>
-        <li>Accessories</li>
-        <li>AppleCare (Monthly multiply by 12)</li>
-        <li>Taxes</li>
-        <li>Shipping costs</li>
+            <li>Device upgrades (size, storage, etc)</li>
+            <li>Accessories</li>
+            <li>AppleCare (If monthly enter value seperately from total cost)</li>
+            <li>Taxes</li>
+            <li>Shipping costs</li>
         </ul>
         
-        <p>To help with this process a calculator has provided below. The first line is the total on your receipt. If you make monthly payments for AppleCare on the second line add what that monthly payment is.</p>
-        <!-- Add the dropdown box here -->
-        <label for="selectedModel">Select iPhone Model:</label>
-        <select id="selectedModel">
-            <option value="iphone17">iPhone 17</option>
-            <option value="iphone17pro">iPhone 17 Pro</option>
-            <option value="iphoneAir">iPhone Air</option>
-        </select><br>
+        <p>To help with this process, enter the quantities of devices purchased and your total purchase information below.</p>
 
-        <label for="num1">iPhone Purchase Total:</label>
-        <input type="number" id="num1"><br>
-        <label for="num2">Monthly AppleCare:</label>
-        <input type="number" id="num2"><br>
+        <label for="country">Select Country:</label>
+        <select id="country">
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Italy">Italy</option>
+        </select>
 
-        <button onclick="calculateTotal()">Calculate Total</button>
-        <p>Minimum Donation: $<span id="total">0</span></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Device</th>
+                    <th>Base Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="deviceTableBody">
+                <!-- Dynamically populated -->
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="3">Total Base Price:</td>
+                    <td class="device-total"><span id="currencySymbol">$</span><span id="totalBasePrice">0.00</span></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <hr>
+
+        <label for="purchaseTotal">Total Purchase Amount (including upgrades, accessories, taxes):</label>
+        <input type="number" id="purchaseTotal" step="0.01" placeholder="0.00"><br>
+        
+        <label for="monthlyAppleCare">Monthly AppleCare Total:</label>
+        <input type="number" id="monthlyAppleCare" step="0.01" placeholder="0.00"><br>
+
+        <button onclick="calculateOffset()">Calculate Marco Offset</button>
+        
+        <p class="total-row">Minimum Donation: $<span id="offsetAmountUSD">0.00</span> <span id="localCurrencyDisplay"></span></p>
 
         <p>I have established a <a id="donationLink" href="https://donate.tiltify.com/@bbech/the-marco-offset">sub-campaign</a> designed to make tracking the funds raised for 'The Marco Offset' donation more enjoyable.</p>
 
@@ -44,11 +89,9 @@
                 <p>Made by <a href="https://mastodon.social/@bbech">bbech</a>.<br />
                 <a href="https://github.com/bjbech/TheMarcoOffset">Github Repo</a>
                 </p>
-
             </small>
-
         </footer>
     </main>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
